@@ -1,4 +1,5 @@
 name: Test
+description: Test your code
 content: |
   ```bash
   echo "Hello World"

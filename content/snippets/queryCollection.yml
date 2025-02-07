@@ -1,4 +1,5 @@
 name: Content Query Collection
+description: Query all that stuff in your Nuxt Content collection !
 content: |
   ```ts
   const route = useRoute()

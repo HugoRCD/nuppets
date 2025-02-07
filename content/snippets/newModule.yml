@@ -1,4 +1,5 @@
 name: New Nuxt module
+description: Install a new Nuxt module has never been so easy.
 content: |
   ```bash
   npx nuxi module add
