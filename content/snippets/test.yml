@@ -1,9 +1,8 @@
 name: Test
 description: Test your code
-content: |
+code: |
   ```bash
   echo "Hello World"
   ```
 tags:
   - test
-  - hello

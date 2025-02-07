@@ -35,7 +35,7 @@ export const collections = {
     source: 'snippets/*.yml',
     schema: z.object({
       name: z.string().nonempty(),
-      content: z.string().nonempty(),
+      code: z.string().nonempty(),
       description: z.string().nonempty(),
       keyword: z.string().nonempty(),
       tags: z.array(z.string().nonempty()).optional(),

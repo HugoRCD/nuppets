@@ -1,6 +1,6 @@
 name: Content Query Collection
 description: Query all that stuff in your Nuxt Content collection !
-content: |
+code: |
   ```ts
   const route = useRoute()
   const { data: page } = await useAsyncData(route.path, () => {
