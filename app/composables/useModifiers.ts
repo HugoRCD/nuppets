@@ -1,10 +1,10 @@
-const modifiersList = ['!', '@', '@@', 'none']
+import type { Modifiers } from '~/utils/constant'
 
 export function useModifiers() {
-  const modifiers = useState('modifiers', () => {
+  const modifiers = useState<Modifiers>('modifiers', () => {
     return {
       start: '!',
-      end: ''
+      end: 'none'
     }
   })
 

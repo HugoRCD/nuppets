@@ -1,0 +1,8 @@
+name: Test
+content: |
+  ```bash
+  echo "Hello World"
+  ```
+tags:
+  - test
+  - hello

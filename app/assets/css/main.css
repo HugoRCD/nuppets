@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @import "@nuxt/ui-pro";
 
-/*@theme {
-  --font-sans: "Geist", sans-serif;
-}*/
+@theme {
+  --font-geist: "Geist", sans-serif;
+}
 
 :root {
   --ui-bg: white;

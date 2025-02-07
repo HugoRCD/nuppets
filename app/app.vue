@@ -23,6 +23,8 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
   twitterCard: 'summary_large_image',
   ogUrl: 'https://nuppets.hrcd.fr',
 })
@@ -34,7 +36,7 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
 </script>
 
 <template>
-  <Html lang="en">
+  <Html lang="en" class="font-geist">
     <UApp>
       <NuxtLayout>
         <NuxtPage />
