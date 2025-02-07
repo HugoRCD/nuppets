@@ -1,16 +1,18 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
   <div>
     <UHeader>
-      <template #title>
-        <div class="flex items-center gap-2">
-          <UIcon name="simple-icons:nuxtdotjs" class="size-8" />
-          Nuppets
-        </div>
+      <template #left>
+        <NuxtLink to="/">
+          <Logo class="w-auto h-6 shrink-0" />
+        </NuxtLink>
+        <TemplateMenu />
       </template>
+
+      <div id="action" />
+
       <template #right>
         <Modifiers />
         <UContentSearchButton />
@@ -43,7 +45,7 @@
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
-          to="https://git.new/hugorcd"
+          to="https://github.com/hugorcd/nuppets"
           target="_blank"
           aria-label="GitHub"
         />

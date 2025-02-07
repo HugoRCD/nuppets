@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content'
-import { useRaycast } from '~/composables/useDeeplink'
 
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('content').first()
@@ -52,16 +51,15 @@ const handleExport = () => {
 <template>
   <div v-if="page">
     <Hero v-bind="page" />
-    <UContainer class="flex justify-center mb-10">
-      <div>
-        <UButton
-          :label="`Add ${selectedSnippets.length} snippet${selectedSnippets.length > 1 ? 's' : ''} to Raycast`"
-          icon="lucide:circle-plus"
-          :disabled="selectedSnippets.length === 0"
-          @click="handleExport"
-        />
-      </div>
-    </UContainer>
+    <Teleport v-if="selectedSnippets.length" to="#action" defer>
+      <UButton
+        :label="`Add ${selectedSnippets.length} snippet${selectedSnippets.length > 1 ? 's' : ''} to Raycast`"
+        icon="custom:raycast"
+        color="neutral"
+        variant="soft"
+        @click="handleExport"
+      />
+    </Teleport>
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
       <UButton
         v-for="tag of tags"
@@ -80,7 +78,7 @@ const handleExport = () => {
         :key="index"
         :snippet
         :active="!!selectedSnippets.find(s => s.id === snippet.id)"
-        @click="toggleSelectSnippet(snippet)"
+        @click.prevent="toggleSelectSnippet(snippet)"
       />
     </UContainer>
   </div>
