@@ -1,0 +1,9 @@
+name: New Nuxt module
+content: |
+  ```bash
+  npx nuxi module add
+  ```
+tags:
+  - module
+  - nuxi
+keyword: nm

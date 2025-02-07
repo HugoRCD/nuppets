@@ -1,5 +1,12 @@
 name: Content Query Collection
+content: |
+  ```ts
+  const route = useRoute()
+  const { data: page } = await useAsyncData(route.path, () => {
+    return queryCollection('content').path(route.path).first()
+  })
+  ```
 keyword: qc
 tags:
-  - Nuxt Content
-  - Query
+  - nuxt-content
+  - query

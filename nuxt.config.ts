@@ -14,6 +14,18 @@ export default defineNuxtConfig({
     'nuxt-visitors',
   ],
 
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
+
+  mdc: {
+    highlight: {
+      noApiRoute: false
+    }
+  },
+
   imports: {
     presets: [
       {
