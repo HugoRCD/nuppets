@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content'
 
-defineProps<{
+const props = defineProps<{
   snippet: Collections['snippets']
 }>()
+
+const { modifiers } = useModifiers()
+
+const keyword = computed(() => {
+  return `${modifiers.value.start}${props.snippet.keyword}${modifiers.value.end}`
+})
 </script>
 
 <template>
@@ -12,7 +18,7 @@ defineProps<{
     <MDC :value="snippet.content" />
     <div>
       <UBadge variant="soft">
-        {{ snippet.keyword }}
+        {{ keyword }}
       </UBadge>
     </div>
   </UPageCard>

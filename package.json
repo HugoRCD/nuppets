@@ -17,6 +17,9 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@iconify-json/heroicons": "1.2.2",
+    "@iconify-json/lucide": "1.2.25",
+    "@iconify-json/simple-icons": "1.2.23",
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@bddd834",
     "@nuxt/image": "1.9.0",
     "@nuxt/scripts": "0.10.0",

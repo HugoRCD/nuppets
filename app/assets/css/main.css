@@ -4,3 +4,11 @@
 /*@theme {
   --font-sans: "Geist", sans-serif;
 }*/
+
+:root {
+  --ui-bg: white;
+}
+
+.dark {
+  --ui-bg: #090909;
+}
