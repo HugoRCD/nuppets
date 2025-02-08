@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { modifiersList } from '~/utils/constant'
 
-const { modifiers } = useModifiers()
+const { start, end } = useModifiers()
 
 const items = ref(modifiersList.map(modifier => ({
   label: modifier,
@@ -16,10 +16,10 @@ const items = ref(modifiersList.map(modifier => ({
     <template #body>
       <div class="flex items-center justify-between gap-2">
         <UFormField label="Start modifier" class="flex items-center gap-2">
-          <USelect v-model="modifiers.start" :items />
+          <USelect v-model="start as Modifier" :items />
         </UFormField>
         <UFormField label="End modifier" class="flex items-center gap-2">
-          <USelect v-model="modifiers.end" :items />
+          <USelect v-model="end as Modifier" :items />
         </UFormField>
       </div>
     </template>

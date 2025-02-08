@@ -7,13 +7,15 @@ const props = defineProps<{
   active?: boolean
 }>()
 
-const { modifiers } = useModifiers()
+const { start, end } = useModifiers()
 
 const keyword = computed(() => {
-  return `${modifiers.value.start}${props.snippet.keyword}${modifiers.value.end === 'none' ? '' : modifiers.value.end}`
+  return `${start.value}${props.snippet.keyword}${end.value === 'none' ? '' : end.value}`
 })
 
 const { exportToRaycast } = useRaycast()
+
+const test = ''
 </script>
 
 <template>
@@ -36,7 +38,6 @@ const { exportToRaycast } = useRaycast()
           {{ keyword }}
         </UBadge>
       </div>
-      <Toaster />
     </div>
   </div>
 </template>

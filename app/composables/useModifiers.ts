@@ -1,14 +1,11 @@
 import type { Modifiers } from '~/utils/constant'
 
 export function useModifiers() {
-  const modifiers = useState<Modifiers>('modifiers', () => {
-    return {
-      start: '!',
-      end: 'none'
-    }
-  })
+  const start = useCookie('start', { default: () => '!' })
+  const end = useCookie('end', { default: () => 'none' })
 
   return {
-    modifiers
+    start,
+    end
   }
 }
