@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useScriptPlausibleAnalytics({
-  domain: 'nuppets.hrcd.fr',
+  domain: 'nuppets.dev',
   scriptInput: {
     src: 'https://analytics.hrcd.fr/js/script.js',
   }

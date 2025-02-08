@@ -7,6 +7,12 @@
 
 [Website](https://nuppets.dev)
 
+<div align="center">
+Made with 💚 for the Nuxt community
+</div>
+
+---
+
 </div>
 
 ## 🚀 About
@@ -65,10 +71,6 @@ body: |
 4.	Submit a PR and we'll review it as soon as possible!
 
 That's it! No complex setup required. The project is designed to be as simple as possible to encourage contributions.
-
-<div align="center">
-Made with 💚 for the Nuxt community
-</div>
 
 <!-- automd:contributors license=Apache author=HugoRCD github="hugorcd/nuppets" -->
 
