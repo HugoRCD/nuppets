@@ -1,0 +1,28 @@
+name: New Nuxt Content Article
+description: Create a new Nuxt Content article
+keyword: na
+code: |
+  ```mdc
+  ---
+  title: New Article
+  description:
+  image:
+  date: {date}
+  tags:
+    - announcement
+  authors:
+    - name:
+      description:
+      to:
+      target: _blank
+      avatar:
+        src:
+        alt:
+  ---
+
+  # New Article
+  ```
+tags:
+  - nuxt-content
+  - content
+  - nuxt
