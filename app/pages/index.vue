@@ -58,7 +58,7 @@ const groups = ref([
 </script>
 
 <template>
-  <div v-if="page">
+  <div v-if="page" class="pb-12">
     <Hero v-bind="page" />
     <Teleport v-if="selectedSnippets.length" to="#action" defer>
       <ActionButton v-model="selectedSnippets" />

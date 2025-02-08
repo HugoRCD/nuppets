@@ -1,0 +1,15 @@
+name: Composable
+description: Create a new Nuxt composable (Raycast)
+keyword: comp
+code: |
+  ```ts
+  export function use{clipboard}() {
+    const {clipboard} = ref(null);
+
+    return {
+     {clipboard}
+    };
+  }
+  ```
+tags:
+  - composable
