@@ -1,6 +1,12 @@
 # Stage 1: Build Stage
 FROM oven/bun:latest AS build
 
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python-is-python3 \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
 ARG NUXT_UI_PRO_LICENSE
 ARG DATABASE_URL
 ARG TURBO_TEAM
