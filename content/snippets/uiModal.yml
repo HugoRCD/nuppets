@@ -4,14 +4,14 @@ keyword: modal
 code: |
   ```vue
   <UModal>
-      <UButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-      <template #content>
-        <UCard>
-          <p>Hello World</p>
-        </UCard>
-      </template>
-    </UModal>
+    <template #content>
+      <UCard>
+        <p>Hello World</p>
+      </UCard>
+    </template>
+  </UModal>
   ```
 tags:
   - nuxt-ui
