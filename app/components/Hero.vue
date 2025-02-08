@@ -27,6 +27,14 @@ defineProps<{
           </UCard>
         </template>
       </UModal>
+      <UButton
+        label="Contribute"
+        icon="i-simple-icons-github"
+        color="neutral"
+        variant="subtle"
+        to="https://github.com/hugorcd/nuppets"
+        target="_blank"
+      />
     </template>
 
     <StarsBg />
