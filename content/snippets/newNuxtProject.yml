@@ -1,0 +1,10 @@
+name: Start a new Nuxt project
+description: Create a new Nuxt project with Nuxi CLI
+keyword: np
+code: |
+  ```bash
+  npx nuxi init nuxt-app --template v4-compat
+  ```
+tags:
+  - nuxt
+  - nuxi

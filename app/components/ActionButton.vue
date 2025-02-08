@@ -5,6 +5,7 @@ const { exportToRaycast } = useRaycast()
 
 const handleExport = () => {
   exportToRaycast(selectedSnippets.value)
+  selectedSnippets.value = []
 }
 
 const generateSnippetsJson = () => {
@@ -27,6 +28,8 @@ const handleDownload = () => {
   a.click()
   document.body.removeChild(a)
   URL.revokeObjectURL(url)
+
+  selectedSnippets.value = []
 }
 
 const { copy, isSupported } = useClipboard()
@@ -40,6 +43,8 @@ const handleCopy = async () => {
   } else {
     toast.error('Clipboard not supported')
   }
+
+  selectedSnippets.value = []
 }
 
 const items = [
