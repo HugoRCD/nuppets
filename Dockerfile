@@ -8,6 +8,7 @@ ARG TURBO_TOKEN
 ENV NUXT_UI_PRO_LICENSE=$NUXT_UI_PRO_LICENSE
 ENV TURBO_TEAM=$TURBO_TEAM
 ENV TURBO_TOKEN=$TURBO_TOKEN
+ENV NITRO_PRESET=bun
 
 WORKDIR /app
 
@@ -26,8 +27,6 @@ FROM oven/bun:latest AS final
 WORKDIR /app
 
 COPY --from=build /app/.output .output
-
-RUN apk update && apk add --no-cache curl
 
 EXPOSE 3000
 

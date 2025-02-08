@@ -11,11 +11,6 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:3000/api/hello" ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
     logging:
       driver: "json-file"
       options:
