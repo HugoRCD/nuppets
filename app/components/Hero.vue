@@ -11,7 +11,7 @@ defineProps<{
     :title
     :description
     icon="simple-icons:nuxtdotjs"
-    :ui="{ description: 'italic before:content-[open-quote] after:content-[close-quote]', headline: 'mb-0', links: 'mt-4' }"
+    :ui="{ title: 'font-grotesque', description: 'italic before:content-[open-quote] after:content-[close-quote]', headline: 'mb-0', links: 'mt-4' }"
   >
     <template #headline>
       <div class="flex items-center justify-center gap-2">

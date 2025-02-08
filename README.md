@@ -1,7 +1,7 @@
 <div align="center">
-<img src="public/banner.png" alt="Nuppets - Universal Nuxt Snippets" />
+<img src="public/banner.png" alt="Nuppets - Universal Nuxt and Vue Snippets" />
 
-### Universal Nuxt snippets that work wherever you code
+### Universal Nuxt and VUe snippets collection that work wherever you code
 
 [Website](https://nuppets.dev)
 
@@ -15,13 +15,13 @@ Made with 💚 for the Nuxt community
 
 ## 🚀 About
 
-Nuppets is more than just a snippet collection - it's a universal hub for Nuxt development resources. Starting with carefully crafted snippets available across multiple platforms (Raycast, VS Code, and more), Nuppets aims to become the go-to resource for everything that makes Nuxt development more efficient.
+Nuppets is more than just a snippet collection - it's a universal hub for Nuxt and Vue development resources. Starting with carefully crafted snippets available across multiple platforms (Raycast, VS Code, and more), Nuppets aims to become the go-to resource for everything that makes Nuxt / Vue development more efficient.
 
 ## ✨ Features
 
 - 📱 **Cross-Platform**: Works with Raycast, VS Code, and more
-- 🎯 **Purpose-Built**: Specifically designed for Nuxt development
-- 🔄 **Always Updated**: Regular updates to match Nuxt's evolution
+- 🎯 **Purpose-Built**: Specifically designed for Nuxt and Vue development
+- 🔄 **Always Updated**: Regular updates to match Nuxt / Vue's evolution
 - 🎨 **Customizable**: Easy to adapt to your workflow
 - 🤝 **Community-Driven**: Built by developers, for developers
 
