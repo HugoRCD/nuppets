@@ -1,0 +1,15 @@
+name: Server Handler
+description: Create a new Nuxt server handler
+keyword: sh
+code: |
+  ```ts
+  import { H3Event } from "h3";
+
+  export default defineEventHandler(async (event: H3Event) => {
+    const body = await readBody(event);
+    // your_api_logic
+  });
+  ```
+tags:
+  - server
+  - api

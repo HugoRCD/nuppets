@@ -40,7 +40,6 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
     selectedSnippets.value.push(snippet)
   }
 }
-
 </script>
 
 <template>

@@ -9,7 +9,7 @@ export const useRaycast = () => {
 
     const snippetData = {
       name: snippet.name,
-      text: snippet.code,
+      text: removeCodeFences(snippet.code),
       keyword
     }
 
@@ -21,7 +21,6 @@ export const useRaycast = () => {
     for (const snippet of snippets) {
       query += `&snippet=${generateSnippetQuery(snippet)}`
     }
-    console.log(query)
     window.open(`${RAYCAST_PROTOCOL}snippets/import?${query}`)
   }
 

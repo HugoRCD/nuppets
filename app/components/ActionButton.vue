@@ -10,7 +10,7 @@ const handleExport = () => {
 const generateSnippetsJson = () => {
   return selectedSnippets.value.map(snippet => ({
     name: snippet.name,
-    code: snippet.code,
+    text: removeCodeFences(snippet.code),
     keyword: snippet.keyword
   }))
 }

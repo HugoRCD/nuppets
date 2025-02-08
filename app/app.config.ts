@@ -5,6 +5,16 @@ export default defineAppConfig({
       neutral: 'neutral'
     }
   },
+  uiPro: {
+    prose: {
+      pre: {
+        slots: {
+          root: 'my-0 size-full',
+          base: 'size-full'
+        }
+      }
+    }
+  },
   title: 'Nuppets',
   description: 'Never write the same code twice',
   link: [
