@@ -1,0 +1,19 @@
+name: Nuxt UI Modal
+description: Create a modal with Nuxt UI
+keyword: modal
+code: |
+  ```vue
+  <UModal>
+      <UButton label="Open" color="neutral" variant="subtle" />
+
+      <template #content>
+        <UCard>
+          <p>Hello World</p>
+        </UCard>
+      </template>
+    </UModal>
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - component
