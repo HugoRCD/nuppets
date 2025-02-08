@@ -14,7 +14,11 @@ defineProps<{
     :ui="{ description: 'italic before:content-[open-quote] after:content-[close-quote]', headline: 'mb-0', links: 'mt-4' }"
   >
     <template #headline>
-      <UIcon name="simple-icons:nuxtdotjs" class="size-10" />
+      <div class="flex items-center justify-center gap-2">
+        <UIcon name="simple-icons:nuxtdotjs" class="size-10" />
+        <USeparator orientation="vertical" class="h-10 w-2" />
+        <UIcon name="simple-icons:vuedotjs" class="h-10 w-8" />
+      </div>
     </template>
 
     <template #links>
