@@ -24,9 +24,7 @@ const keyword = computed(() => {
         <span class="font-semibold">
           {{ snippet.name }}
         </span>
-        <p class="text-xs text-neutral-500">
-          {{ snippet.description }}
-        </p>
+        <MDC :value="snippet.description" class="text-xs text-neutral-500" />
       </div>
       <div>
         <UBadge variant="soft" size="lg" class="px-3 py-0.5">
