@@ -1,5 +1,6 @@
 name: Content Query Collection
 description: Query all that stuff in your Nuxt Content collection !
+keyword: qc
 code: |
   ```ts
   const route = useRoute()
@@ -7,7 +8,7 @@ code: |
     return queryCollection('content').path(route.path).first()
   })
   ```
-keyword: qc
 tags:
   - nuxt-content
   - query
+  - nuxt

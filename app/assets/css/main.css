@@ -4,6 +4,7 @@
 @theme {
   --font-geist: "Geist", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --font-grotesque: "Bricolage Grotesque", sans-serif;
 }
 
 :root {
