@@ -6,7 +6,7 @@ const { data: page } = await useAsyncData('index', () => {
 })
 
 const { data: snippets } = await useAsyncData('snippets', () =>
-  queryCollection('snippets').all()
+  queryCollection('snippets').order('name', 'ASC').all()
 )
 
 const active = ref('all')
