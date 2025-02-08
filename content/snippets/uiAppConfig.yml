@@ -1,0 +1,17 @@
+name: UI App Config
+description: Generate the UI App Config for Nuxt UI Pro
+keyword: ac
+code: |
+  ```ts
+  export default defineAppConfig({
+    ui: {
+      colors: {
+        primary: 'green',
+        neutral: 'neutral'
+      }
+    }
+  })
+  ```
+tags:
+  - nuxt-ui
+  - nuxt

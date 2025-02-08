@@ -98,7 +98,7 @@ const groups = ref([
         :key="index"
         :snippet
         :active="!!selectedSnippets.find(s => s.id === snippet.id)"
-        @click.prevent="toggleSelectSnippet(snippet)"
+        @click="toggleSelectSnippet(snippet)"
       />
     </UContainer>
   </div>

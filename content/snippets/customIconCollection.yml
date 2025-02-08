@@ -1,0 +1,22 @@
+name: Custom Icon Collection
+description: Create a @nuxt/icon custom collection
+keyword: cic
+code: |
+  ```ts
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+    }
+  },
+  ```
+tags:
+  - icon
+  - nuxt-ui
+  - nuxt
