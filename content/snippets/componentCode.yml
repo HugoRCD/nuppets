@@ -1,0 +1,19 @@
+name: Component Code
+description: Extremely specific snippet to generate the code of a component in the Nuxt UI documentation (cc [@BenjaminCanac](https://x.com/benjamincanac))
+keyword: cc
+code: |
+  ```mdc
+  ::component-code{pro}
+  ---
+  hide:
+    - class
+  props:
+    class: ''
+  ---
+  ::
+  ```
+tags:
+  - documentation
+  - nuxt
+  - nuxt-ui
+  - vue
