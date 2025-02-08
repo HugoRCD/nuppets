@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   content: {
     database: {
       type: 'postgres',
-      url: process.env.POSTGRES_URL!,
+      url: process.env.DATABASE_URL!
     },
     preview: {
       api: 'https://api.nuxt.studio'
