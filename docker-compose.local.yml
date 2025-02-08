@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
+        - DATABASE_URL=${DATABASE_URL}
         - NUXT_UI_PRO_LICENSE=${NUXT_UI_PRO_LICENSE}
         - TURBO_TEAM=${TURBO_TEAM}
         - TURBO_TOKEN=${TURBO_TOKEN}

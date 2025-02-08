@@ -40,7 +40,7 @@ useSeoMeta({
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-      <Visitors />
+      <!--      <Visitors />-->
       <Toaster />
     </UApp>
   </Html>

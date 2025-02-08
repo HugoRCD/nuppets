@@ -1,8 +1,6 @@
 <div align="center">
 <img src="public/banner.png" alt="Nuppets - Universal Nuxt Snippets" />
 
-# Nuppets
-
 ### Universal Nuxt snippets that work wherever you code
 
 [Website](https://nuppets.dev)
