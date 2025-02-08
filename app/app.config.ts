@@ -12,6 +12,11 @@ export default defineAppConfig({
           root: 'my-0 size-full',
           base: 'size-full text-xs'
         }
+      },
+      p: {
+        slots: {
+          root: 'my-0'
+        }
       }
     }
   },
