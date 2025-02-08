@@ -40,6 +40,21 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
     selectedSnippets.value.push(snippet)
   }
 }
+
+const searchTerm = ref('')
+const value = ref([])
+const groups = ref([
+  {
+    id: 'snippets',
+    label: 'Snippets',
+    items: snippets.value?.map(snippet => ({
+      label: snippet.name,
+      suffix: snippet.description,
+      icon: 'i-lucide-box',
+      onSelect: () => toggleSelectSnippet(snippet)
+    }))
+  }
+])
 </script>
 
 <template>
@@ -49,6 +64,23 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
       <ActionButton v-model="selectedSnippets" />
     </Teleport>
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
+      <UModal>
+        <UButton
+          color="neutral"
+          variant="subtle"
+          icon="i-lucide-search"
+        />
+
+        <template #content>
+          <LazyUCommandPalette
+            v-model="value"
+            v-model:search-term="searchTerm"
+            multiple
+            placeholder="Search for a snippet"
+            :groups
+          />
+        </template>
+      </UModal>
       <UButton
         v-for="tag of tags"
         :key="tag"

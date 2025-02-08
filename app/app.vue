@@ -32,11 +32,6 @@ useSeoMeta({
   twitterImage: 'https://nuppets.dev/og.png',
   ogUrl: 'https://nuppets.dev',
 })
-const searchTerm = ref('')
-
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('snippets'), {
-  server: false
-})
 </script>
 
 <template>
@@ -45,14 +40,7 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-      <ClientOnly>
-        <LazyUContentSearch
-          v-model:search-term="searchTerm"
-          :files
-          shortcut="meta_k"
-          :fuse="{ resultLimit: 42 }"
-        />
-      </ClientOnly>
+      <Visitors />
       <Toaster />
     </UApp>
   </Html>

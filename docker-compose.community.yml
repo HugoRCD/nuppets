@@ -4,7 +4,7 @@ services:
     container_name: nuppets
     restart: always
     environment:
-      - NUXT_UI_PRO_LICENSE=${NUXT_UI_PRO_LICENSE}
+      - DATABASE_URL=${DATABASE_URL}
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:3000/api/hello" ]
       interval: 30s

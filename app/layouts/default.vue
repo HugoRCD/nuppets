@@ -15,7 +15,6 @@
 
       <template #right>
         <Modifiers />
-        <UContentSearchButton />
         <UColorModeButton />
       </template>
     </UHeader>
