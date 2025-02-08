@@ -1,0 +1,12 @@
+name: Nuxt UI Index CSS
+description: Create a basic Nuxt UI index.css
+keyword: uiCss
+code: |
+  ```css
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - css

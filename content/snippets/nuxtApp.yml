@@ -1,0 +1,23 @@
+name: Basic Nuxt app.vue
+description: Create a basic Nuxt app.vue
+keyword: app
+code: |
+  ```vue
+  <script setup lang="ts">
+  </script>
+
+  <template>
+    <Html lang="en">
+      <Body>
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </Body>
+    </Html>
+  </template>
+
+  <style scoped>
+  </style>
+  ```
+tags:
+  - nuxt
