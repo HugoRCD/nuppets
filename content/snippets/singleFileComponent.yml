@@ -1,0 +1,23 @@
+name: Single File Component
+description: Create a new Vue component with script, template, and style
+keyword: sfc
+code: |
+  ```vue
+  <script setup lang="ts">
+  defineProps<{
+    test: string
+  }>()
+  </script>
+
+  <template>
+    <div>
+      Hello {{ test }}
+    </div>
+  </template>
+
+  <style scoped>
+
+  </style>
+  ```
+tags:
+  - component

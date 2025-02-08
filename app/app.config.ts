@@ -10,7 +10,7 @@ export default defineAppConfig({
       pre: {
         slots: {
           root: 'my-0 size-full',
-          base: 'size-full'
+          base: 'size-full text-xs'
         }
       }
     }

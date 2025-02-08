@@ -49,6 +49,10 @@ export const collections = {
     type: 'data',
     schema: z.object({
       ...baseSchema,
+      about: z.object({
+        lang: z.string().nonempty(),
+        content: z.string().nonempty()
+      }),
       hero: sectionWithLinksSchema,
       features: sectionSchema,
       sections: z.array(

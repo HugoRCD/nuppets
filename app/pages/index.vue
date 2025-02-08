@@ -60,7 +60,7 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
         @click="active = tag"
       />
     </UContainer>
-    <UContainer class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <UContainer class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <Snippet
         v-for="(snippet, index) in filteredSnippets"
         :key="index"

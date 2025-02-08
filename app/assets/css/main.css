@@ -8,6 +8,20 @@
 
 :root {
   --ui-bg: white;
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--ui-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #9CA3AF;
+    border-radius: 0.5rem;
+  }
 }
 
 .dark {
