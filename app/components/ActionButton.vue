@@ -48,16 +48,26 @@ const handleCopy = async () => {
 }
 
 const items = [
-  {
-    label: 'Download JSON',
-    icon: 'i-heroicons-arrow-down-tray',
-    onSelect: handleDownload
-  },
-  {
-    label: 'Copy JSON',
-    icon: 'i-heroicons-clipboard-document',
-    onSelect: handleCopy
-  }
+  [
+    {
+      label: 'Download JSON',
+      icon: 'i-heroicons-arrow-down-tray',
+      onSelect: handleDownload
+    },
+    {
+      label: 'Copy JSON',
+      icon: 'i-heroicons-clipboard-document',
+      onSelect: handleCopy
+    },
+  ],
+  [
+    {
+      label: 'Clear selection',
+      icon: 'i-lucide-x',
+      color: 'error' as const,
+      onSelect: () => selectedSnippets.value = []
+    }
+  ]
 ]
 </script>
 
