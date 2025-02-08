@@ -4,6 +4,7 @@ keyword: app
 code: |
   ```vue
   <script setup lang="ts">
+
   </script>
 
   <template>
@@ -17,6 +18,7 @@ code: |
   </template>
 
   <style scoped>
+
   </style>
   ```
 tags:
