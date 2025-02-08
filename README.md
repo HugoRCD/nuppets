@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/banner.png" alt="Nuppets - Universal Nuxt Snippets" />
+<img src="public/banner.png" alt="Nuppets - Universal Nuxt Snippets" />
 
 # Nuppets
 
@@ -26,6 +26,8 @@ Nuppets is more than just a snippet collection - it's a universal hub for Nuxt d
 - 🔄 **Always Updated**: Regular updates to match Nuxt's evolution
 - 🎨 **Customizable**: Easy to adapt to your workflow
 - 🤝 **Community-Driven**: Built by developers, for developers
+
+Actually, there is no support for VS Code yet. But it's on the roadmap!
 
 <!-- automd:fetch url="gh:hugorcd/markdown/main/src/local_development_dev.md" -->
 

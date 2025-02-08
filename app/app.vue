@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Toaster } from 'vue-sonner'
+
 useScriptPlausibleAnalytics({
   domain: 'nuppets.dev',
   scriptInput: {
@@ -14,7 +16,7 @@ const {
 
 useHead({
   title,
-  titleTemplate: `%s | ${title}`,
+  titleTemplate: '',
   link: link,
 })
 
@@ -23,10 +25,12 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
+  ogImage: 'https://nuppets.dev/og.png',
   twitterTitle: title,
   twitterDescription: description,
   twitterCard: 'summary_large_image',
-  ogUrl: 'https://nuppets.hrcd.fr',
+  twitterImage: 'https://nuppets.dev/og.png',
+  ogUrl: 'https://nuppets.dev',
 })
 const searchTerm = ref('')
 
@@ -49,6 +53,7 @@ const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSe
           :fuse="{ resultLimit: 42 }"
         />
       </ClientOnly>
+      <Toaster />
     </UApp>
   </Html>
 </template>

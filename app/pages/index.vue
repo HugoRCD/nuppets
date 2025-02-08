@@ -41,24 +41,13 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
   }
 }
 
-const { exportToRaycast } = useRaycast()
-
-const handleExport = () => {
-  exportToRaycast(selectedSnippets.value)
-}
 </script>
 
 <template>
   <div v-if="page">
     <Hero v-bind="page" />
     <Teleport v-if="selectedSnippets.length" to="#action" defer>
-      <UButton
-        :label="`Add ${selectedSnippets.length} snippet${selectedSnippets.length > 1 ? 's' : ''} to Raycast`"
-        icon="custom:raycast"
-        color="neutral"
-        variant="soft"
-        @click="handleExport"
-      />
+      <ActionButton v-model="selectedSnippets" />
     </Teleport>
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
       <UButton
