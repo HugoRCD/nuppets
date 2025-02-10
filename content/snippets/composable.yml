@@ -1,5 +1,5 @@
 name: Composable
-description: Create a new Nuxt composable (Raycast)
+description: Create a new Nuxt composable
 keyword: comp
 code: |
   ```ts

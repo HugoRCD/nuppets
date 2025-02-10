@@ -6,7 +6,7 @@
     <UHeader>
       <template #left>
         <NuxtLink to="/">
-          <Logo class="w-auto h-6 shrink-0 invert dark:invert-0" />
+          <Logo class="w-auto h-6" />
         </NuxtLink>
         <TemplateMenu />
       </template>
