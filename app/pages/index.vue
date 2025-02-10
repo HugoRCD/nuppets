@@ -36,6 +36,14 @@ function toggleSelectSnippet(snippet: Snippet) {
 }
 
 const searchTerm = ref('')
+const open = ref(false)
+
+defineShortcuts({
+  meta_k: () => {
+    open.value = !open.value
+  }
+})
+
 const value = ref([])
 const groups = ref([
   {
@@ -59,15 +67,17 @@ const groups = ref([
     </Teleport>
 
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
-      <UModal>
+      <UModal v-model:open="open">
         <UButton color="neutral" variant="subtle" icon="i-lucide-search" />
         <template #content>
           <LazyUCommandPalette
             v-model="value"
             v-model:search-term="searchTerm"
             multiple
+            close
             placeholder="Search for a snippet"
             :groups
+            @update:open="open = $event"
           />
         </template>
       </UModal>
