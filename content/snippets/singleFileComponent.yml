@@ -11,7 +11,7 @@ code: |
 
   <template>
     <div>
-      Hello {{ test }}
+      Hello {{ test }}{cursor}
     </div>
   </template>
 

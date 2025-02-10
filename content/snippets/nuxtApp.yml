@@ -4,7 +4,7 @@ keyword: app
 code: |
   ```vue
   <script setup lang="ts">
-
+  {cursor}
   </script>
 
   <template>

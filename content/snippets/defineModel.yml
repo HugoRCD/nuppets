@@ -1,0 +1,11 @@
+name: Define Model (two ways bindings)
+description: Make a new model in a Vue component
+keyword: defmodel
+code: |
+  ```ts
+  const modelValue = defineModel({ required: true })
+  ```
+tags:
+  - vue
+  - nuxt
+  - reactivity
