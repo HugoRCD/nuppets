@@ -1,0 +1,43 @@
+name: UDropdownMenu
+description: Create a dropdown menu with Nuxt UI
+keyword: menuDropdown
+code: |
+  ```vue
+  <script setup lang="ts">
+  const items = ref([
+    {
+    label: 'Profile',
+    icon: 'i-lucide-user'
+    },
+    {
+      label: 'Billing',
+      icon: 'i-lucide-credit-card'
+    },
+    {
+      label: 'Settings',
+      icon: 'i-lucide-cog'
+    }
+  ])
+  </script>
+
+  <template>
+    <UDropdownMenu
+      :items="items"
+      :content="{
+        align: 'start',
+        side: 'bottom',
+        sideOffset: 8
+      }"
+      :ui="{
+        content: 'w-48'
+      }"
+    >
+      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+    </UDropdownMenu>
+  </template>
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - vue
+  - component

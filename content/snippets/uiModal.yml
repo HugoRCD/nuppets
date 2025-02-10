@@ -1,4 +1,4 @@
-name: Nuxt UI Modal
+name: UModal
 description: Create a modal with Nuxt UI
 keyword: modal
 code: |
@@ -16,4 +16,5 @@ code: |
 tags:
   - nuxt-ui
   - nuxt
+  - vue
   - component

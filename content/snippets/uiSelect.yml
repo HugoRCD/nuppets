@@ -1,0 +1,36 @@
+name: USelect
+description: Create a simple select with Nuxt UI
+keyword: select
+code: |
+  ```vue
+  <script setup lang="ts">
+  const items = ref([
+    {
+      label: 'Backlog',
+      value: 'backlog'
+    },
+    {
+      label: 'Todo',
+      value: 'todo'
+    },
+    {
+      label: 'In Progress',
+      value: 'in_progress'
+    },
+    {
+      label: 'Done',
+      value: 'done'
+    }
+  ])
+  const value = ref('backlog')
+  </script>
+
+  <template>
+    <USelect v-model="value" :items="items" class="w-48" />
+  </template>
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - vue
+  - component
