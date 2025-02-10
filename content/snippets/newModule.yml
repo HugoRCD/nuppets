@@ -3,7 +3,7 @@ description: Install a new Nuxt module has never been so easy.
 keyword: nm
 code: |
   ```bash
-  npx nuxi module add
+  npx nuxi module add {cursor}
   ```
 tags:
   - module

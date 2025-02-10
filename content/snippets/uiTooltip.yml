@@ -1,0 +1,14 @@
+name: UTooltip
+description: Create a tooltip with Nuxt UI
+keyword: tooltip
+code: |
+  ```vue
+  <UTooltip text="Open on GitHub">
+    <UButton label="Open" color="neutral" variant="subtle" />
+  </UTooltip>
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - vue
+  - component

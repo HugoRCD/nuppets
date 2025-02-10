@@ -1,0 +1,34 @@
+name: USelectMenu
+description: Create a select menu with Nuxt UI
+keyword: menuSelect
+code: |
+  ```vue
+  <script setup lang="ts">
+  const items = ref([
+    {
+      label: 'Backlog'
+    },
+    {
+      label: 'Todo'
+    },
+    {
+      label: 'In Progress'
+    },
+    {
+      label: 'Done'
+    }
+  ])
+  const value = ref({
+    label: 'Todo'
+  })
+  </script>
+
+  <template>
+    <USelectMenu v-model="value" :items="items" class="w-48" />
+  </template>
+  ```
+tags:
+  - nuxt-ui
+  - nuxt
+  - vue
+  - component

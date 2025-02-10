@@ -1,39 +1,33 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
-
-const { data: page } = await useAsyncData('index', () => {
-  return queryCollection('content').first()
-})
-
-const { data: snippets } = await useAsyncData('snippets', () =>
+const { data: page } = await useAsyncData('index', () =>
+  queryCollection('content').first()
+)
+const { data: rawSnippets } = await useAsyncData('snippets', () =>
   queryCollection('snippets').order('name', 'ASC').all()
 )
 
+const snippets = ref<Snippet[]>(validateSnippets(rawSnippets.value || []))
 const active = ref('all')
 
 const tags = computed(() => {
-  const allTags = snippets.value?.flatMap(snippet => snippet.tags) || []
+  const allTags = snippets.value.flatMap(snippet => snippet.tags || [])
   const uniqueTags = [...new Set(allTags)]
   return [
     'all',
-    ...uniqueTags.map(tag =>
-      tag!.toLowerCase().replace(/^\w/, c => c.toUpperCase())
-    )
+    ...uniqueTags.map(tag => tag.toLowerCase().replace(/^\w/, c => c.toUpperCase()))
   ]
 })
 
 const filteredSnippets = computed(() => {
   if (active.value === 'all') return snippets.value
-  return snippets.value?.filter(snippet =>
-    snippet.tags?.some(tag =>
-      tag!.toLowerCase() === active.value.toLowerCase()
-    )
+  return snippets.value.filter(snippet =>
+    (snippet.tags || []).some(tag => tag.toLowerCase() === active.value.toLowerCase())
   )
 })
 
-const selectedSnippets = ref<Collections['snippets'][]>([])
+const selectedSnippets = ref<Snippet[]>([])
 
-function toggleSelectSnippet(snippet: Collections['snippets']) {
+function toggleSelectSnippet(snippet: Snippet) {
   if (selectedSnippets.value.find(s => s.id === snippet.id)) {
     selectedSnippets.value = selectedSnippets.value.filter(s => s.id !== snippet.id)
   } else {
@@ -42,6 +36,14 @@ function toggleSelectSnippet(snippet: Collections['snippets']) {
 }
 
 const searchTerm = ref('')
+const open = ref(false)
+
+defineShortcuts({
+  meta_k: () => {
+    open.value = !open.value
+  }
+})
+
 const value = ref([])
 const groups = ref([
   {
@@ -63,21 +65,19 @@ const groups = ref([
     <Teleport v-if="selectedSnippets.length" to="#action" defer>
       <ActionButton v-model="selectedSnippets" />
     </Teleport>
-    <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
-      <UModal>
-        <UButton
-          color="neutral"
-          variant="subtle"
-          icon="i-lucide-search"
-        />
 
+    <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
+      <UModal v-model:open="open">
+        <UButton color="neutral" variant="subtle" icon="i-lucide-search" />
         <template #content>
           <LazyUCommandPalette
             v-model="value"
             v-model:search-term="searchTerm"
             multiple
+            close
             placeholder="Search for a snippet"
             :groups
+            @update:open="open = $event"
           />
         </template>
       </UModal>
@@ -92,14 +92,30 @@ const groups = ref([
         @click="active = tag"
       />
     </UContainer>
-    <UContainer class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <Snippet
-        v-for="(snippet, index) in filteredSnippets"
-        :key="index"
-        :snippet
-        :active="!!selectedSnippets.find(s => s.id === snippet.id)"
-        @click="toggleSelectSnippet(snippet)"
-      />
+
+    <UContainer>
+      <Transition name="cross-fade" mode="out-in">
+        <div :key="active" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Snippet
+            v-for="snippet in filteredSnippets"
+            :key="snippet.id"
+            :snippet
+            :active="!!selectedSnippets.find(s => s.id === snippet.id)"
+            @click="toggleSelectSnippet(snippet)"
+          />
+        </div>
+      </Transition>
     </UContainer>
   </div>
 </template>
+
+<style scoped>
+.cross-fade-enter-active,
+.cross-fade-leave-active {
+  transition: opacity 300ms ease;
+}
+.cross-fade-enter-from,
+.cross-fade-leave-to {
+  opacity: 0;
+}
+</style>
