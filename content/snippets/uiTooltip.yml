@@ -3,9 +3,11 @@ description: Create a tooltip with Nuxt UI
 keyword: tooltip
 code: |
   ```vue
-  <UTooltip text="Open on GitHub">
-    <UButton label="Open" color="neutral" variant="subtle" />
-  </UTooltip>
+  <template>
+    <UTooltip text="Open on GitHub">
+      <UButton label="Open" color="neutral" variant="subtle" />
+    </UTooltip>
+  </template>
   ```
 tags:
   - nuxt-ui
