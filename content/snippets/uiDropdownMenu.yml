@@ -6,8 +6,8 @@ code: |
   <script setup lang="ts">
   const items = ref([
     {
-    label: 'Profile',
-    icon: 'i-lucide-user'
+      label: 'Profile',
+      icon: 'i-lucide-user'
     },
     {
       label: 'Billing',
