@@ -37,7 +37,7 @@
     "@hrcd/eslint-config": "^2.2.1",
     "@shelve/cli": "^3.1.1",
     "typescript": "^5.7.3",
-    "eslint": "^9.20.0",
+    "eslint": "^9.20.1",
     "automd": "0.3.12"
   }
 }
