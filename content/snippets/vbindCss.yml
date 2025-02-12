@@ -1,0 +1,22 @@
+name: Vue v-bind CSS
+description: Bind a vue ref to a css attribute
+keyword: vBindCss
+code: |
+  ```vue
+  <script setup>
+  const color = ref('red')
+  </script>
+
+  <template>
+    <p>hello</p>
+  </template>
+
+  <style scoped>
+  p {
+    color: v-bind('color');
+  }
+  </style>
+  ```
+tags:
+  - vue
+  - css
