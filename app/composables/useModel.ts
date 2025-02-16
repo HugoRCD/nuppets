@@ -22,7 +22,6 @@ export function useModels() {
     }
     const models = await getAvailableAiModels()
     modelsCache.value = models
-    console.log(models)
     return models
   })
 
