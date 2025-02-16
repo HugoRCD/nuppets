@@ -1,4 +1,9 @@
 <script setup lang="ts">
+definePageMeta({
+  title: 'Snippets',
+  description: 'A universal hub for Nuxt and Vue snippets - Available for Raycast and more coming soon'
+})
+
 const { data: rawSnippets } = await useAsyncData('snippets', () =>
   queryCollection('snippets')
     .order('name', 'ASC')

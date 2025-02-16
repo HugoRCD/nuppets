@@ -3,21 +3,7 @@
 
 <template>
   <div>
-    <UHeader>
-      <template #left>
-        <NuxtLink to="/">
-          <Logo class="w-auto h-6" />
-        </NuxtLink>
-        <TemplateMenu />
-      </template>
-
-      <div id="action" />
-
-      <template #right>
-        <Modifiers />
-        <UColorModeButton />
-      </template>
-    </UHeader>
+    <Header />
     <UMain>
       <slot />
     </UMain>
