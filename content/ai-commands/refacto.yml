@@ -1,0 +1,24 @@
+name: Refactor Component
+description: Refactor a Vue component to adhere to best practices for Nuxt and the Composition API
+prompt: |
+  ```md
+  Optimize the following Vue component code to adhere to best practices for Nuxt and the Composition API. Refactor the code so that:
+
+  - It is structured in a clean and well-organized manner using <script setup> syntax.
+  - Reactive data is declared with ref or reactive.
+  - Common logic is extracted into composables when applicable.
+  - Lifecycle hooks, computed properties, and watchers are properly implemented.
+  - The overall functionality and structure of the component are preserved.
+
+  Return ONLY the updated component code without any additional commentary or extraneous import/export statements.
+
+  {selection}
+
+  Rules:
+    - Return ONLY the refactored component code using best practices.
+    - Do not include any comments or explanations within the returned code.
+  ```
+tags:
+  - vue
+  - nuxt
+  - component
