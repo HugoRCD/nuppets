@@ -15,7 +15,7 @@ const keyword = computed(() => {
 
 <template>
   <div
-    class="cursor-pointer flex flex-col justify-between gap-1 border-2 hover:border-green-400 rounded-md p-4 transition-colors duration-200 hover:bg-green-50/40 dark:hover:bg-green-950/40"
+    class="select-none cursor-pointer flex flex-col justify-between gap-1 border-2 hover:border-green-400 rounded-md p-4 transition-colors duration-200 hover:bg-green-50/40 dark:hover:bg-green-950/40"
     :class="[active ? 'border-green-400 bg-green-50/40 dark:bg-green-950/40' : 'border-neutral-100 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900']"
   >
     <MDC :value="snippet.code" class="size-full max-h-[250px]" />

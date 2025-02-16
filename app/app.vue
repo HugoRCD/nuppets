@@ -24,7 +24,7 @@ useHead({
     { name: 'charset', content: 'utf-8' },
     { name: 'color-scheme', content: 'light dark' },
   ],
-  link: link,
+  link,
 })
 
 useSeoMeta({
