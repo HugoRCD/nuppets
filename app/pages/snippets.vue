@@ -63,28 +63,15 @@ const {
     </UContainer>
 
     <UContainer>
-      <Transition name="cross-fade" mode="out-in">
-        <div :key="active" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Snippet
-            v-for="snippet in filteredResources"
-            :key="snippet.id"
-            :snippet
-            :active="!!selectedResources.find(s => s.id === snippet.id)"
-            @click="toggleSelectResource(snippet)"
-          />
-        </div>
-      </Transition>
+      <div :key="active" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <Snippet
+          v-for="snippet in filteredResources"
+          :key="snippet.id"
+          :snippet
+          :active="!!selectedResources.find(s => s.id === snippet.id)"
+          @click="toggleSelectResource(snippet)"
+        />
+      </div>
     </UContainer>
   </div>
 </template>
-
-<style scoped>
-.cross-fade-enter-active,
-.cross-fade-leave-active {
-  transition: opacity 300ms ease;
-}
-.cross-fade-enter-from,
-.cross-fade-leave-to {
-  opacity: 0;
-}
-</style>

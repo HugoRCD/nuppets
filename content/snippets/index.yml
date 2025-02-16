@@ -1,7 +1,7 @@
 title: Snippets
 description: Never write the same code twice
 about: |
-  ## What are Snippets?
+  ### What are Snippets?
 
   Snippets are pre-written pieces of code that you can quickly insert into your project. Think of them as smart shortcuts that save you from typing repetitive code patterns.
 
@@ -19,10 +19,3 @@ about: |
   ### Inspired by Raycast
 
   This project is heavily inspired by [snippets.ray.so](https://snippets.ray.so), a brilliant tool by the Raycast team. Their approach to developer experience has shaped how we think about productivity tools.
-
-  ### See it in Action
-
-  <video width="100%" autoplay loop muted>
-  <source src="/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>

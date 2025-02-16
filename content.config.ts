@@ -19,9 +19,6 @@ export const collections = {
       name: z.string().nonempty(),
       description: z.string().nonempty(),
       prompt: z.object({}),
-      model: z.string().optional(),
-      icon: z.string().optional(),
-      creativity: z.string().optional(),
       tags: z.array(z.string().nonempty()).optional(),
     })
   }),

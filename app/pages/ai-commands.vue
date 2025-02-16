@@ -62,28 +62,15 @@ const {
     </UContainer>
 
     <UContainer>
-      <Transition name="cross-fade" mode="out-in">
-        <div :key="active" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <AiCommand
-            v-for="aiCommand in filteredResources"
-            :key="aiCommand.id"
-            :ai-command
-            :active="!!selectedResources.find(s => s.id === aiCommand.id)"
-            @click="toggleSelectResource(aiCommand)"
-          />
-        </div>
-      </Transition>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <AiCommand
+          v-for="aiCommand in filteredResources"
+          :key="aiCommand.id"
+          :ai-command
+          :active="!!selectedResources.find(s => s.id === aiCommand.id)"
+          @click="toggleSelectResource(aiCommand)"
+        />
+      </div>
     </UContainer>
   </div>
 </template>
-
-<style scoped>
-.cross-fade-enter-active,
-.cross-fade-leave-active {
-  transition: opacity 300ms ease;
-}
-.cross-fade-enter-from,
-.cross-fade-leave-to {
-  opacity: 0;
-}
-</style>
