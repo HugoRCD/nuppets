@@ -10,3 +10,5 @@ export type Modifiers = {
 }
 
 export type Snippet = Collections['snippets']
+
+export type AICommand = Collections['aiCommands']

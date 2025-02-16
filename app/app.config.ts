@@ -21,7 +21,6 @@ export default defineAppConfig({
     }
   },
   title: 'Nuppets',
-  description: 'A universal hub for Nuxt and Vue snippets - Available for Raycast, VS Code, and more',
   link: [
     {
       rel: 'icon',

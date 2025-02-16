@@ -1,0 +1,15 @@
+name: Type to Fake Data
+description: Generate fake data based on the selected type / interface
+prompt: |
+  ```md
+  Use this type, interface, or selected structure to generate synthetic data that can be effectively utilized for testing purposes.
+  For instance, if the selected structure is a TypeScript type like "User",
+  generate an array of fictional users using the provided type (please modify the structure using the appropriate format for each type of selection).
+  The selection:
+    {selection}
+
+  The synthetic data:
+  ```
+tags:
+  - typescript
+  - fake-data

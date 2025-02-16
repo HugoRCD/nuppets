@@ -1,29 +1,28 @@
 <div align="center">
-<img src="public/banner.png" alt="Nuppets - Universal Nuxt and Vue Snippets" />
+  <img src="public/banner.png" alt="Nuppets - Your Hub for Nuxt and Vue Resources" />
 
-### Universal Nuxt and VUe snippets collection that work wherever you code
+### Your one-stop hub for Nuxt and Vue development resources
 
 [Website](https://nuppets.dev)
 
-<div align="center">
-Made with 💚 for the Nuxt community
-</div>
+  <div align="center">
+    Made with 💚 for the Nuxt community
+  </div>
 
----
-
+  ---
 </div>
 
 ## 🚀 About
 
-Nuppets is more than just a snippet collection - it's a universal hub for Nuxt and Vue development resources. Starting with carefully crafted snippets available across multiple platforms (Raycast, VS Code, and more), Nuppets aims to become the go-to resource for everything that makes Nuxt / Vue development more efficient.
+Nuppets is a comprehensive hub designed to empower Nuxt and Vue developers. More than just a snippet collection, Nuppets brings together a curated set of development resources—including AI commands, practical code examples, and expert techniques—focusing on integrations with Raycast. While the platform is firmly centered around Raycast at the moment, support for additional providers (like VS Code) is on the roadmap, ensuring you always have the best tools to make your development more efficient.
 
 ## ✨ Features
 
-- 📱 **Cross-Platform**: Works with Raycast, VS Code, and more
-- 🎯 **Purpose-Built**: Specifically designed for Nuxt and Vue development
-- 🔄 **Always Updated**: Regular updates to match Nuxt / Vue's evolution
-- 🎨 **Customizable**: Easy to adapt to your workflow
-- 🤝 **Community-Driven**: Built by developers, for developers
+-   📱 **Built around Raycast**: Developed with a focus on the Raycast ecosystem, with plans to support other providers in the future.
+-   🎯 **Tailored for Nuxt and Vue**: Crafted specifically to address the needs and challenges of modern front-end development.
+-   🔄 **Always Evolving**: Regular updates to keep pace with the ever-changing landscape of Nuxt and Vue.
+-   🎨 **Easily Customizable**: Adaptable resources that integrate seamlessly into your workflow.
+-   🤝 **Community-Powered**: Contributed by developers, for developers.
 
 Actually, there is no support for VS Code yet. But it's on the roadmap!
 
@@ -45,9 +44,9 @@ Actually, there is no support for VS Code yet. But it's on the roadmap!
 
 ## 🤝 Contributing
 
-Contributing to Nuppets is straightforward! We use Nuxt Content, making it easy to add new snippets.
+Contributing to Nuppets is straightforward! We use Nuxt Content, making it easy to add new resources.
 1.	Fork the repository
-2.	Create a new `.yml` file in the `content/snippets` directory
+2.	Create a new `.yml` file in the `content/snippets` directory for example
 3.	Follow the existing snippet format:
 ```yml
 name: component

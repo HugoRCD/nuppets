@@ -9,14 +9,16 @@ useScriptPlausibleAnalytics({
 })
 
 const {
-  title,
-  description,
+  title: appTitle,
   link
 } = useAppConfig()
 
+const route = useRoute()
+const title = computed(() => `${appTitle} | ${route.meta.title}`)
+
 useHead({
   title,
-  titleTemplate: '%s | Nuxt and Vue snippets collection',
+  titleTemplate: title.value,
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
     { name: 'charset', content: 'utf-8' },
@@ -27,12 +29,12 @@ useHead({
 
 useSeoMeta({
   title,
-  description,
+  description: route.meta.description as string,
   ogTitle: title,
-  ogDescription: description,
+  ogDescription: route.meta.description as string,
   ogImage: 'https://nuppets.dev/og.png',
   twitterTitle: title,
-  twitterDescription: description,
+  twitterDescription: route.meta.description as string,
   twitterCard: 'summary_large_image',
   twitterImage: 'https://nuppets.dev/og.png',
   ogUrl: 'https://nuppets.dev',
