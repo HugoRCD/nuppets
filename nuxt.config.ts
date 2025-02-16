@@ -36,7 +36,9 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { isr: true, prerender: true },
+    '/snippets': { isr: true, prerender: true },
+    '/ai-commands': { isr: true, prerender: true },
+    '/': { redirect: { statusCode: 301, to: '/snippets' } },
   },
 
   nitro: {
