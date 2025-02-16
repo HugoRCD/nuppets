@@ -32,19 +32,19 @@ const {
   <div class="pb-12">
     <Hero />
     <Teleport v-if="selectedResources.length" to="#action" defer>
-      <ActionButton v-model="selectedResources" />
+      <ActionButton v-model="selectedResources" resource-type="aiCommand" />
     </Teleport>
 
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
       <UModal v-model:open="open">
-        <UButton color="neutral" variant="soft" icon="i-lucide-chevron-down" />
+        <UButton color="neutral" variant="soft" icon="i-lucide-search" />
         <template #content>
           <LazyUCommandPalette
             v-model="value"
             v-model:search-term="searchTerm"
             multiple
             close
-            placeholder="Search for a snippet"
+            placeholder="Search for a AI command"
             :groups
             @update:open="open = $event"
           />
@@ -79,5 +79,12 @@ const {
 </template>
 
 <style scoped>
-
+.cross-fade-enter-active,
+.cross-fade-leave-active {
+  transition: opacity 300ms ease;
+}
+.cross-fade-enter-from,
+.cross-fade-leave-to {
+  opacity: 0;
+}
 </style>

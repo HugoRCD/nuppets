@@ -1,6 +1,7 @@
 name: Generate Zod Schema
-description: Generate a Zod schema from a JSON schema
+description: Select whatever you want and generate a Zod schema from it
 prompt: |
+  ```md
   Generate a Zod schema based on the following data structure (JSON, TypeScript, or YAML):
 
   {selection}
@@ -26,6 +27,7 @@ prompt: |
     - No additional comments or documentation
 
   Return only the Zod schema:
+  ```
 tags:
   - zod
   - nuxt-content
