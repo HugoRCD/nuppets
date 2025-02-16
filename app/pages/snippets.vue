@@ -4,45 +4,6 @@ definePageMeta({
   description: 'A universal hub for Nuxt and Vue snippets - Available for Raycast and more coming soon'
 })
 
-const { data: rawSnippets } = await useAsyncData('snippets', () =>
-  queryCollection('snippets')
-    .order('name', 'ASC')
-    .where('id', '<>', 'snippets/snippets/index.yml')
-    .all()
-)
-
-const snippets = ref<Snippet[]>(validateSnippets(rawSnippets.value || []))
-const active = ref('all')
-
-const tags = computed(() => {
-  const allTags = snippets.value.flatMap(snippet => snippet.tags || [])
-  const uniqueTags = [...new Set(allTags)]
-  return [
-    'all',
-    ...uniqueTags.map(tag => tag.toLowerCase().replace(/^\w/, c => c.toUpperCase()))
-  ]
-})
-
-const filteredSnippets = computed(() => {
-  if (active.value === 'all') return snippets.value
-  return snippets.value.filter(snippet =>
-    (snippet.tags || []).some(tag => tag.toLowerCase() === active.value.toLowerCase())
-  )
-})
-
-const selectedSnippets = ref<Snippet[]>([])
-
-function toggleSelectSnippet(snippet: Snippet) {
-  if (selectedSnippets.value.find(s => s.id === snippet.id)) {
-    selectedSnippets.value = selectedSnippets.value.filter(s => s.id !== snippet.id)
-  } else {
-    selectedSnippets.value.push(snippet)
-  }
-}
-
-const searchTerm = ref('')
-const open = ref(false)
-
 defineShortcuts({
   meta_k: () => {
     open.value = !open.value
@@ -50,25 +11,28 @@ defineShortcuts({
 })
 
 const value = ref([])
-const groups = ref([
-  {
-    id: 'snippets',
-    label: 'Snippets',
-    items: snippets.value?.map(snippet => ({
-      label: snippet.name,
-      suffix: snippet.description,
-      icon: 'i-lucide-box',
-      onSelect: () => toggleSelectSnippet(snippet)
-    }))
-  }
-])
+const open = ref(false)
+const searchTerm = ref('')
+
+const {
+  active,
+  tags,
+  filteredResources,
+  selectedResources,
+  toggleSelectResource,
+  groups,
+} = await useResourceCollection<Snippet>({
+  collectionName: 'snippets',
+  excludeId: 'snippets/snippets/index.yml',
+  validator: validateSnippets,
+})
 </script>
 
 <template>
   <div class="pb-12">
     <Hero />
-    <Teleport v-if="selectedSnippets.length" to="#action" defer>
-      <ActionButton v-model="selectedSnippets" />
+    <Teleport v-if="selectedResources.length" to="#action" defer>
+      <ActionButton v-model="selectedResources" />
     </Teleport>
 
     <UContainer class="flex flex-wrap justify-center gap-4 mb-6 max-w-4xl mx-auto w-full">
@@ -102,11 +66,11 @@ const groups = ref([
       <Transition name="cross-fade" mode="out-in">
         <div :key="active" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Snippet
-            v-for="snippet in filteredSnippets"
+            v-for="snippet in filteredResources"
             :key="snippet.id"
             :snippet
-            :active="!!selectedSnippets.find(s => s.id === snippet.id)"
-            @click="toggleSelectSnippet(snippet)"
+            :active="!!selectedResources.find(s => s.id === snippet.id)"
+            @click="toggleSelectResource(snippet)"
           />
         </div>
       </Transition>

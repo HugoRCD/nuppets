@@ -1,3 +1,17 @@
-title: |
-  # Nuppets | [AI Commands]{.text-primary-500}
+title: AI Commands
 description: Boost your productivity with powerful AI commands
+about: |
+  ## What are AI Commands?
+
+  AI Commands are a collection of powerful commands that can be used to enhance your workflow. They are powered by the [Raycast](https://www.raycast.com/) platform, which provides a unified interface for interacting with various tools and services.
+
+  ## How to Use AI Commands
+
+  To use AI Commands, simply open the Raycast search bar and type in the command you want to execute. For example, to generate a Zod schema for a `yml` file for Nuxt Content.
+
+  ## AI Commands in Action
+
+  <video width="100%" autoplay loop muted>
+  <source src="/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>

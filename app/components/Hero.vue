@@ -11,6 +11,7 @@ const { data: page } = await useAsyncData(`hero-${route.path}`, () =>
 <template>
   <UPageHero
     v-if="page"
+    :title="page.title"
     :description="page.description"
     icon="simple-icons:nuxtdotjs"
     :ui="{
@@ -18,9 +19,6 @@ const { data: page } = await useAsyncData(`hero-${route.path}`, () =>
       headline: 'mb-0',
       links: 'mt-4' }"
   >
-    <template #title>
-      <MDC :value="page.title" class="font-grotesque text-5xl font-bold" />
-    </template>
     <template #headline>
       <div class="flex items-center justify-center gap-2">
         <UIcon name="simple-icons:nuxtdotjs" class="size-10" />
