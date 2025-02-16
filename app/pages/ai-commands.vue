@@ -21,10 +21,9 @@ const {
   selectedResources,
   toggleSelectResource,
   groups,
-} = await useResourceCollection<Snippet>({
+} = await useResourceCollection<AICommand>({
   collectionName: 'aiCommands',
   excludeId: 'aiCommands/ai-commands/index.yml',
-  validator: validateSnippets,
 })
 </script>
 

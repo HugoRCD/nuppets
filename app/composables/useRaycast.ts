@@ -1,16 +1,9 @@
 import type { AICommand } from '~/utils/constant'
 
-
-function prepareModel(model?: string) {
-  if (model && /^".*"$/.test(model)) {
-    return model.slice(1, model.length - 1) as Model
-  }
-  return model || 'openai-gpt-4o-mini'
-}
-
 export const useRaycast = () => {
   const RAYCAST_PROTOCOL = 'raycast://'
   const { start, end } = useModifiers()
+  const { model } = useModels()
 
   const generateSnippetQuery = (snippet: Snippet): string => {
     const keyword = `${start.value}${snippet.keyword}${end.value === 'none' ? '' : end.value}`
@@ -26,8 +19,9 @@ export const useRaycast = () => {
     const commandData = {
       title: aiCommand.name,
       prompt: removeCodeFences(aiCommand.prompt),
-      model: prepareModel(aiCommand.model),
+      model: model.value,
     }
+    console.log(commandData)
     return encodeURIComponent(JSON.stringify(commandData))
   }
 

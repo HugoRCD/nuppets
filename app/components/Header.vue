@@ -15,6 +15,7 @@ const route = useRoute()
 
     <template #right>
       <Modifiers v-if="route.path === '/snippets'" />
+      <Models v-if="route.path === '/ai-commands'" />
       <UColorModeButton />
     </template>
   </UHeader>

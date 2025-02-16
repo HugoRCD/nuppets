@@ -27,7 +27,6 @@ useHead({
   link: link,
 })
 
-
 useSeoMeta({
   title,
   description: route.meta.description as string,

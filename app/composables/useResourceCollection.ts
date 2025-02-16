@@ -14,7 +14,7 @@ export async function useResourceCollection<T>(options: {
     return q.all()
   })
 
-  const resources = ref<T[]>(rawData.value as T[])
+  const resources = ref<T[]>(validator ? validator(rawData.value || []) as T[] : rawData.value as T[])
   const active = ref('all')
 
   const tags = computed(() => {

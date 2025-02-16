@@ -42,7 +42,7 @@ function selectItem(item: typeof selected.value) {
       size="xs"
       class="-mb-[6px] font-semibold rounded-full truncate"
       :class="[open && 'bg-[var(--ui-primary)]/15']"
-      :ui="{ trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined].filter(Boolean).join(' ') }"
+      :ui="{ label: 'max-sm:hidden', trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined].filter(Boolean).join(' ') }"
     />
   </UDropdownMenu>
 </template>
