@@ -1,17 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
-  description: string
-  about: any
-}>()
+import { withoutLeadingSlash } from 'ufo'
 
 const open = ref(false)
+const route = useRoute()
+const { data: page } = await useAsyncData(`hero-${route.path}`, () =>
+  queryCollection('content').where('stem', '=', `${withoutLeadingSlash(route.path)}/index`).first()
+)
 </script>
 
 <template>
   <UPageHero
-    :title
-    :description
+    v-if="page"
+    :title="page.title"
+    :description="page.description"
     icon="simple-icons:nuxtdotjs"
     :ui="{ title: 'font-grotesque', description: 'italic before:content-[open-quote] after:content-[close-quote]', headline: 'mb-0', links: 'mt-4' }"
   >
@@ -24,7 +25,7 @@ const open = ref(false)
     </template>
 
     <template #links>
-      <UModal v-model:open="open" :ui="{ content: 'sm:max-w-3xl' }">
+      <UModal v-if="page.about" v-model:open="open" :ui="{ content: 'sm:max-w-3xl' }">
         <UButton label="About" icon="i-lucide-info" />
 
         <template #content>
@@ -46,7 +47,7 @@ const open = ref(false)
                 />
               </div>
             </template>
-            <MDC :value="about.content" />
+            <MDC :value="page.about.content" />
           </UCard>
         </template>
       </UModal>

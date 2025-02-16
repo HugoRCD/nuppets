@@ -44,32 +44,26 @@ export const collections = {
       tags: z.array(z.string().nonempty()).optional(),
     })
   }),
-  content: defineCollection({
-    source: 'index.yml',
+  aiCommands: defineCollection({
     type: 'data',
+    source: 'ai-commands/*.yml',
     schema: z.object({
-      ...baseSchema,
+      name: z.string().nonempty(),
+      description: z.string().nonempty(),
+      prompt: z.string().nonempty(),
+      tags: z.array(z.string().nonempty()).optional(),
+    })
+  }),
+  content: defineCollection({
+    type: 'data',
+    source: '**/*.yml',
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
       about: z.object({
         lang: z.string().nonempty(),
         content: z.string().nonempty()
       }),
-      hero: sectionWithLinksSchema,
-      features: sectionSchema,
-      sections: z.array(
-        sectionSchema.extend({
-          links: z.array(linkSchema),
-          reverse: z.boolean().optional(),
-          code: z.string().optional()
-        })
-      ),
-      cta: sectionWithLinksSchema,
-      faq: sectionSchema.extend({
-        items: z.array(z.object({
-          label: z.string().nonempty(),
-          content: z.string().nonempty(),
-          defaultOpen: z.boolean().optional()
-        }))
-      })
     })
   })
 }

@@ -1,0 +1,31 @@
+name: Generate Zod Schema
+description: Generate a Zod schema from a JSON schema
+prompt: |
+  Generate a Zod schema based on the following data structure (JSON, TypeScript, or YAML):
+
+  {selection}
+
+  Rules:
+    - Return ONLY the schema definition without any imports or additional code
+    - Infer primitive types (string, number, boolean, null)
+    - Convert arrays to z.array()
+    - Handle nested objects recursively
+    - Create enums when necessary
+    - Support optional fields with z.optional()
+    - Keep the schema as simple as possible
+    - Preserve the original structure regardless of input format
+
+  Example of expected output format:
+    const schemaName = z.object({
+    // schema content here
+  })
+
+  DO NOT include:
+    - No "import" statements
+    - No "export" statements
+    - No additional comments or documentation
+
+  Return only the Zod schema:
+tags:
+  - zod
+  - nuxt-content
