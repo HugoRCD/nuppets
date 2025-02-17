@@ -1,5 +1,5 @@
 <template>
-  <div class="stars pointer-events-none absolute inset-x-0 top-0 size-full opacity-75">
+  <div class="stars -z-1 pointer-events-none absolute inset-x-0 top-0 size-full opacity-75">
     <div class="size-px rounded-full bg-transparent" />
     <div class="size-px rounded-full bg-transparent" />
     <div class="size-px rounded-full bg-transparent" />
