@@ -5,8 +5,8 @@
       "name": "nuppets",
       "dependencies": {
         "@iconify-json/heroicons": "1.2.2",
-        "@iconify-json/lucide": "1.2.34",
-        "@iconify-json/simple-icons": "1.2.30",
+        "@iconify-json/lucide": "1.2.35",
+        "@iconify-json/simple-icons": "1.2.31",
         "@number-flow/vue": "^0.4.7",
         "@nuxt/content": "^3.4.0",
         "@nuxt/image": "1.10.0",
@@ -205,9 +205,9 @@
 
     "@iconify-json/heroicons": ["@iconify-json/heroicons@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg=="],
 
-    "@iconify-json/lucide": ["@iconify-json/lucide@1.2.34", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-6xiITvlYP/5d6KQPRBHDQ+eaLxRWiTvXfuVGuNX2ahNLbEi0VKB04v008IQLPrMu/C4tRMI4+sRzHd/wSFxGZQ=="],
+    "@iconify-json/lucide": ["@iconify-json/lucide@1.2.35", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-q1OFEufIzxaiMuuLOrFmhVPvlj0asriU84w1MsfooeOAB2Tk1DFCuL61HJnb4lGxDhcxhU28m6bjYLW1fwox9Q=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.30", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-KiVViMvnohpS5Q9WMP+4ksOhF3Dnq73Ba9hxBhUIIhp1r6RJ6edMZ8QGKZcFZp/B0/PZC4jAIhXcKKq73WZckQ=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.31", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-xBUPtvkcSAiXs9DfVtudhLddQtQYin3I3Ph/W5FNYA0oE6r2hmLB8TgOog9OjOt1Sxn3IB5+4n5+64DMf2xNmQ=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.530", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-jAgl0ptlcZIRRi+GdadEv8KlIrvc2wNV1L7pj/K09xmJDsEEX1okpF2KfNObJXc1Vdfh3mV429RVa7I3v1EcSw=="],
 
