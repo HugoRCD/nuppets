@@ -29,7 +29,6 @@
     "@vueuse/core": "13.3.0",
     "@vueuse/nuxt": "13.3.0",
     "nuxt": "^3.17.4",
-    "nuxt-og-image": "^5.1.4",
     "nuxt-visitors": "1.2.2",
     "vue": "latest",
     "vue-sonner": "2.0.0"
