@@ -18,18 +18,18 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "1.2.2",
-    "@iconify-json/lucide": "1.2.58",
-    "@iconify-json/simple-icons": "1.2.44",
+    "@iconify-json/lucide": "1.2.60",
+    "@iconify-json/simple-icons": "1.2.45",
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "^3.6.3",
-    "@nuxt/image": "1.10.0",
+    "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "0.11.10",
-    "@nuxt/ui-pro": "^3.2.0",
+    "@nuxt/ui-pro": "^3.3.0",
     "@nuxtjs/seo": "^3.1.0",
-    "@vueuse/core": "13.5.0",
-    "@vueuse/nuxt": "13.5.0",
+    "@vueuse/core": "13.6.0",
+    "@vueuse/nuxt": "13.6.0",
     "better-sqlite3": "^12.2.0",
-    "nuxt": "^3.17.7",
+    "nuxt": "^3.18.0",
     "nuxt-visitors": "1.2.2",
     "vue": "latest",
     "vue-sonner": "2.0.2"
@@ -37,8 +37,8 @@
   "devDependencies": {
     "@hrcd/eslint-config": "^3.0.3",
     "@shelve/cli": "^4.1.6",
-    "typescript": "^5.8.3",
-    "eslint": "^9.31.0",
+    "typescript": "^5.9.2",
+    "eslint": "^9.32.0",
     "automd": "0.4.0"
   }
 }
