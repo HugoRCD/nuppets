@@ -19,7 +19,7 @@
   "dependencies": {
     "@iconify-json/heroicons": "1.2.2",
     "@iconify-json/lucide": "1.2.60",
-    "@iconify-json/simple-icons": "1.2.45",
+    "@iconify-json/simple-icons": "1.2.46",
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "1.11.0",
@@ -29,7 +29,7 @@
     "@vueuse/core": "13.6.0",
     "@vueuse/nuxt": "13.6.0",
     "better-sqlite3": "^12.2.0",
-    "nuxt": "^3.18.0",
+    "nuxt": "^3.18.1",
     "nuxt-visitors": "1.2.2",
     "vue": "latest",
     "vue-sonner": "2.0.2"
