@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "1.2.2",
-    "@iconify-json/lucide": "1.2.60",
-    "@iconify-json/simple-icons": "1.2.46",
+    "@iconify-json/lucide": "1.2.62",
+    "@iconify-json/simple-icons": "1.2.47",
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "1.11.0",
@@ -38,7 +38,7 @@
     "@hrcd/eslint-config": "^3.0.3",
     "@shelve/cli": "^4.1.6",
     "typescript": "^5.9.2",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "automd": "0.4.0"
   }
 }
