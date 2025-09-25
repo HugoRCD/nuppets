@@ -23,7 +23,7 @@
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "^3.7.1",
     "@nuxt/image": "1.11.0",
-    "@nuxt/scripts": "0.11.13",
+    "@nuxt/scripts": "0.12.1",
     "@nuxt/ui-pro": "^3.3.5",
     "@nuxtjs/seo": "^3.2.2",
     "@vueuse/core": "13.9.0",
