@@ -37,7 +37,7 @@
   "devDependencies": {
     "@hrcd/eslint-config": "^3.0.3",
     "@shelve/cli": "^4.1.6",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "eslint": "^9.36.0",
     "automd": "0.4.2"
   }
