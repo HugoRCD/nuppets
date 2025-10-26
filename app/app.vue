@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { Toaster } from 'vue-sonner'
 
-useScriptPlausibleAnalytics({
-  domain: 'nuppets.dev',
-  scriptInput: {
-    src: 'https://analytics.hrcd.fr/js/script.js',
-  }
-})
-
 const {
   title: appTitle,
   link

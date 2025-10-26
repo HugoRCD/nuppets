@@ -69,7 +69,7 @@ const items = [
 </script>
 
 <template>
-  <UButtonGroup>
+  <UFieldGroup>
     <UButton
       :label="`Add ${selectedResources.length} ${resourceType === 'snippet' ? 'snippet' : 'AI Command'}${selectedResources.length > 1 ? 's' : ''} to Raycast`"
       icon="custom:raycast"
@@ -80,5 +80,5 @@ const items = [
     <UDropdownMenu :items>
       <UButton color="neutral" variant="soft" icon="i-lucide-chevron-down" />
     </UDropdownMenu>
-  </UButtonGroup>
+  </UFieldGroup>
 </template>

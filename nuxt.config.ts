@@ -1,17 +1,16 @@
 export default defineNuxtConfig({
 
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-10-26',
 
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/ui-pro',
+    '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@vueuse/nuxt',
-    'nuxt-visitors',
+    '@vueuse/nuxt'
   ],
 
   content: {
@@ -42,9 +41,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    experimental: {
-      websocket: true,
-    },
     prerender: {
       crawlLinks: true,
     },
@@ -73,9 +69,5 @@ export default defineNuxtConfig({
       includeCustomCollections: true,
     },
     provider: 'iconify',
-  },
-
-  future: {
-    compatibilityVersion: 4
   }
 })
