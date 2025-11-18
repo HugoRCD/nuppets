@@ -7,7 +7,7 @@
       "dependencies": {
         "@iconify-json/heroicons": "1.2.3",
         "@iconify-json/lucide": "1.2.73",
-        "@iconify-json/simple-icons": "1.2.58",
+        "@iconify-json/simple-icons": "1.2.59",
         "@number-flow/vue": "^0.4.8",
         "@nuxt/content": "^3.8.2",
         "@nuxt/image": "1.11.0",
@@ -227,7 +227,7 @@
 
     "@iconify-json/lucide": ["@iconify-json/lucide@1.2.73", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-++HFkqDNu4jqG5+vYT+OcVj9OiuPCw9wQuh8G5QWQnBRSJ9eKwSStiU8ORgOoK07xJsm/0VIHySMniXUUXP9Gw=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.58", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-XtXEoRALqztdNc9ujYBj2tTCPKdIPKJBdLNDebFF46VV1aOAwTbAYMgNsK5GMCpTJupLCmpBWDn+gX5SpECorQ=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.59", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-fYx/InyQsWFW4wVxWka3CGDJ6m/fXoTqWBSl+oA3FBXO5RhPAb6S3Y5bRgCPnrYevErH8VjAL0TZevIqlN2PhQ=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.610", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-HFIv5V09CIb3ZylZbaZhUfGZfoHPwtEcEg8RmTIFABRTTtCI4olYjaVkQuvF1m3hnz+skbdeD0DeGnd+wP0vLg=="],
 
