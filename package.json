@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "1.2.3",
-    "@iconify-json/lucide": "1.2.74",
-    "@iconify-json/simple-icons": "1.2.59",
+    "@iconify-json/lucide": "1.2.76",
+    "@iconify-json/simple-icons": "1.2.60",
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "^3.8.2",
     "@nuxt/image": "1.11.0",
