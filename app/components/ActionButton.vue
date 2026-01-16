@@ -2,9 +2,23 @@
 const { resourceType = 'snippet' } = defineProps<{ resourceType?: 'snippet' | 'aiCommand' }>()
 const selectedResources = defineModel<any[]>({ required: true })
 
+const hasSelection = computed(() => selectedResources.value.length > 0)
+const selectionCount = computed(() => selectedResources.value.length)
+const resourceLabel = computed(() => resourceType === 'snippet' ? 'snippet' : 'AI Command')
+const selectionLabel = computed(() => {
+  const count = selectionCount.value
+  return `Add ${count} ${resourceLabel.value}${count > 1 ? 's' : ''} to Raycast`
+})
+const emptyStateLabel = computed(() =>
+  resourceType === 'snippet'
+    ? 'Select snippets below to add them to Raycast'
+    : 'Select AI commands below to add them to Raycast'
+)
+
 const { exportToRaycast } = useRaycast()
 
 const handleExport = () => {
+  if (!hasSelection.value) return
   exportToRaycast(selectedResources.value, resourceType)
   selectedResources.value = []
 }
@@ -18,6 +32,7 @@ const generateResourcesJson = () => {
 }
 
 const handleDownload = () => {
+  if (!hasSelection.value) return
   const jsonData = JSON.stringify(generateResourcesJson(), null, 2)
   const blob = new Blob([jsonData], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
@@ -34,6 +49,7 @@ const handleDownload = () => {
 const { copy, isSupported } = useClipboard()
 
 const handleCopy = async () => {
+  if (!hasSelection.value) return
   const jsonData = JSON.stringify(generateResourcesJson(), null, 2)
   if (isSupported.value) {
     await copy(jsonData)
@@ -71,13 +87,14 @@ const items = [
 <template>
   <UFieldGroup>
     <UButton
-      :label="`Add ${selectedResources.length} ${resourceType === 'snippet' ? 'snippet' : 'AI Command'}${selectedResources.length > 1 ? 's' : ''} to Raycast`"
+      :label="hasSelection ? selectionLabel : emptyStateLabel"
       icon="custom:raycast"
       color="neutral"
       variant="soft"
+      :disabled="!hasSelection"
       @click="handleExport"
     />
-    <UDropdownMenu :items>
+    <UDropdownMenu v-if="hasSelection" :items>
       <UButton color="neutral" variant="soft" icon="i-lucide-chevron-down" />
     </UDropdownMenu>
   </UFieldGroup>
