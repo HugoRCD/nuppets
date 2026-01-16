@@ -30,7 +30,7 @@ const {
 <template>
   <div class="pb-12">
     <Hero />
-    <Teleport v-if="selectedResources.length" to="#action" defer>
+    <Teleport to="#action" defer>
       <ActionButton v-model="selectedResources" resource-type="aiCommand" />
     </Teleport>
 
