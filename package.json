@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "1.2.3",
-    "@iconify-json/lucide": "1.2.88",
-    "@iconify-json/simple-icons": "1.2.69",
-    "@number-flow/vue": "^0.4.9",
-    "@nuxt/content": "^3.11.0",
+    "@iconify-json/lucide": "1.2.92",
+    "@iconify-json/simple-icons": "1.2.71",
+    "@number-flow/vue": "^0.4.10",
+    "@nuxt/content": "^3.11.2",
     "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "0.13.2",
     "@nuxt/ui": "^4.4.0",
@@ -29,7 +29,7 @@
     "@vueuse/core": "13.9.0",
     "@vueuse/nuxt": "13.9.0",
     "better-sqlite3": "^12.6.2",
-    "nuxt": "^4.3.0",
+    "nuxt": "^4.3.1",
     "vue": "latest",
     "vue-sonner": "2.0.9"
   },
@@ -37,7 +37,7 @@
     "@hrcd/eslint-config": "^3.0.3",
     "@shelve/cli": "^4.1.7",
     "typescript": "^5.9.3",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "automd": "0.4.3"
   }
 }
