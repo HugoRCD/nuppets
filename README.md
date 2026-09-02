@@ -71,6 +71,18 @@ body: |
 
 That's it! No complex setup required. The project is designed to be as simple as possible to encourage contributions.
 
+<!-- automd:fetch url="gh:hugorcd/markdown/main/src/sponsors.md" -->
+
+## Sponsors
+
+<p align="center">
+  <a href="https://github.com/sponsors/HugoRCD">
+    <img src='https://cdn.jsdelivr.net/gh/hugorcd/static/sponsors.svg' alt="HugoRCD sponsors" />
+  </a>
+</p>
+
+<!-- /automd -->
+
 <!-- automd:contributors license=Apache author=HugoRCD github="hugorcd/nuppets" -->
 
 Published under the [APACHE](https://github.com/hugorcd/nuppets/blob/main/LICENSE) license.
