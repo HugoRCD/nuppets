@@ -11,8 +11,6 @@ permissions:
 jobs:
   autofix:
     runs-on: ubuntu-latest
-    env:
-      NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
